@@ -47,9 +47,11 @@ Step 2. Run `make test`
 
 ## What I spent time on
 
-I spent about an hour writing all the Go code including tests. I've never written Go before.
+I have not previously used Go, worked with Redis, set up a docker container, or used docker-compose.
 
-I spent about 12 hours on all the docker build things.
+I spent about an hour or two making things work locally, including writing the proxy server and e2e tests.
+
+I spent what feels like 12 hours on all the docker build things.
 
 ## What I didn't implment
 
