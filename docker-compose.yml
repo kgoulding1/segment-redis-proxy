@@ -1,0 +1,14 @@
+version: "3"
+services:
+  app:
+    # replace username/repo:tag with your name and image details
+    image: redisproxy
+    ports:
+      - "8080:8080"
+    command: -redisAddr redis:6379 -expiry 10s -capacity 9 -port :8080
+    links:
+      - redis
+  redis:
+    image: redis
+    ports:
+      - "7001:6379"

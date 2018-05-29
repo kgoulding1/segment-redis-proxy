@@ -20,7 +20,7 @@ type GetServer struct {
 
 // Create a new Get Server.
 func NewGetServer(clientPool pool.Pool, capacity int, expiryTime time.Duration) *GetServer {
-	cache := ccache.New(ccache.Configure().MaxSize(int64(capacity)))
+	cache := ccache.New(ccache.Configure().MaxSize(int64(capacity)).GetsPerPromote(1).ItemsToPrune(1))
 	c := &GetServer{clientPool: clientPool, cache: *cache, expiryTime: expiryTime}
 	return c
 }
